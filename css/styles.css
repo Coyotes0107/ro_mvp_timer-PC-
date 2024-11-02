@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 介紹區域樣式 */
+.intro-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.intro-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 設定區域樣式 */
+.settings-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.settings-header {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    background-color: #4CAF50; 
+}
+
+.toggle-btn {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; 
+}
+
+.toggle-btn .arrow {
+    color: white; /* 確保箭頭也是白色 */
+}
+
+.toggle-btn:hover {
+    background-color: #45a049;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.settings-content {
+    padding: 20px;
+    display: block;
+}
+
+.settings-content.collapsed {
+    display: none;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* 輸入區域樣式 */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#idInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+#generateBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#generateBtn:hover {
+    background-color: #45a049;
+}
+
+/* Dual Listbox 樣式 */
+.dual-listbox {
+    display: flex;
+    gap: 20px;
+}
+
+.list-section {
+    flex: 1;
+}
+
+.list-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.list-section select {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.list-section select option {
+    padding: 8px;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+
+/* 聲音設定樣式 */
+.sound-settings {
+    margin-top: 10px;
+}
+
+.sound-checkbox-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 計時器顯示區域樣式 */
+.display-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* 保留原有的計時器相關樣式 */
+.timer-wrapper {
+    width: 150px;
+    text-align: center;
+}
+
+.timer-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.color-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid gray;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+}
+
+.timer-container.timing .color-block {
+    opacity: 1;
+}
+
+.timer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.timer-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    display: none;
+    z-index: 2;
+}
+
+.timer-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(135, 206, 235, 0.9);
+    padding: 6px 8px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+.timer-label {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.copy-tooltip {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}

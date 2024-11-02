@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>計時器</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 介紹區域 -->
+      <div class="intro-section">
+        <h1 class="intro-title">RO MVP Timer by BgrMky</h1>
+        <p class="intro-text">
+          打不到卡
+        </p>
+      </div>
+      <!-- 設定區域 -->
+      <div class="settings-section">
+        <div class="settings-header">
+          <button id="toggleSettings" class="toggle-btn">
+            設定區域
+            <span class="arrow">▼</span>
+          </button>
+        </div>
+        <div class="settings-content">
+          <div class="settings-grid">
+            <!-- 左側：輸入區域 -->
+            <div class="input-section">
+              <div class="sound-settings">
+                <label class="sound-checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="sound-checkbox"
+                    id="soundEnabled"
+                  />
+                  <span>開啟30秒倒數提示音效</span>
+                </label>
+              </div>
+              <h3>直接輸入ID或從右方清單雙擊選取計時器</h3>
+              <textarea
+                id="idInput"
+                placeholder="請輸入ID（每行一個）"
+                rows="5"
+              ></textarea>
+              <button id="generateBtn">產生</button>
+            </div>
+
+            <!-- 右側：Dual Listbox -->
+            <div class="dual-listbox">
+              <div class="list-section">
+                <h3>可用計時器</h3>
+                <select id="sourceList" multiple>
+                  <!-- 由JavaScript填充 -->
+                </select>
+              </div>
+              <div class="list-section">
+                <h3>已選計時器</h3>
+                <select id="targetList" multiple>
+                  <!-- 由JavaScript填充 -->
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 計時器顯示區域 -->
+      <div class="display-section">
+        <div class="row" id="timerRow">
+          <!-- 計時器將由 JavaScript 動態生成 -->
+        </div>
+      </div>
+    </div>
+    <div id="copyTooltip" class="copy-tooltip">已複製編號！</div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
